@@ -1,0 +1,18 @@
+.msg
+{
+    color:  #FF0C0C;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+}
+.msg1
+{
+    color:  transparent;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+}

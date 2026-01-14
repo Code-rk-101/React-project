@@ -1,0 +1,54 @@
+.container
+{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    width: 1182px;
+    height: 522px;
+    margin-top: calc(90vh - 522px);
+}
+
+.gameImg
+{
+    width: 650px;
+    height: 522px;
+}
+.startContainer
+{
+    display: flex;
+    flex-direction: row;
+}
+.start
+{
+    
+    width: 528px;
+    height: 188px;
+    margin-top: 167px;
+}
+.start h1
+{
+    font-size: 96px;
+    font-weight: 900;
+    margin: 0px;
+}
+.start button
+{
+    width: 220px;
+    height: 44px;
+    background-color: black;
+    color: white;
+
+    border: 2px solid transparent;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+
+    margin-left: 306px;
+}
+.start button:hover
+{
+    cursor: pointer;
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+}

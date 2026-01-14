@@ -1,0 +1,29 @@
+.navBar
+{
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0px 8px;
+    width: 100%;
+    height: 72px;
+    margin-bottom: 70px;
+}
+
+a
+{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    border: 1px solid transparent;
+    padding: 2px;
+
+    margin: 0px 24px;
+}
+a:hover
+{
+    cursor: pointer;
+    border: 1px solid black;
+    padding : 2px;
+}
