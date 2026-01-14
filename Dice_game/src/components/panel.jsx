@@ -1,14 +1,17 @@
+import { useContext } from "react";
 import NumVal from "./numValue";
 import style from "./panel.module.css"
+import GameStore from "../store/gameStore";
 const Panel = ()=>
 {
     const Num = ["1","2","3","4","5","6"];
+    const {score} = useContext(GameStore);
     return(
         <>
             <div className={style.panel}>
                 <div className={style.score}>
                     <div className={style.value}>
-                        <p>0</p>
+                        <p>{score}</p>
                     </div>
                     <div className={style.scoreMsg}>
                         <p>Total Score</p>

@@ -1,26 +1,37 @@
-import { useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import style from "./gamebord.module.css"
+import GameStore from "../store/gameStore";
 
 const imgVal= ()=> 
 {
-    return Math.floor(Math.random()*6) +1;
+    const value = Math.floor(Math.random()*6) +1;
+    return value;
 }  
 
-const GameBord = ()=>
+const GameBord = ({handleRuleShow})=>
 {
-    
+    const {handleOnDiceClick,errorMsgStatus,resetScore} = useContext(GameStore);
     const [val,setVal] = useState(1);
     const [sel,setSel] = useState(true);
 
-    const handleOnImageClick =()=>
+    const handleOnImageClick = () =>
     {
-        setVal(imgVal());
-    }
-    useEffect(()=>
+        if(!errorMsgStatus)
         {
-            console.log(val)
-        }
-        ,[val]);
+            const newVal = imgVal();
+            setVal(newVal);
+            handleOnDiceClick(newVal);
+        }   
+    };
+    const handleOnRules = ()=>
+    {
+        setSel(!sel);
+        handleRuleShow(sel);
+    }
+    const handleResetScore =()=>
+    {
+        resetScore();
+    }
     
 
     return (
@@ -38,17 +49,19 @@ const GameBord = ()=>
 
                 <div className={style.controlBtns}>
                     <div>
-                        <button className={style.resetBtn}>Reset Score</button>
+                        <button 
+                        className={style.resetBtn}
+                        onClick={handleResetScore}>Reset Score</button>
                     </div>
                     <div>
                     {sel ? (
                         <button 
                         className={style.showResult}
-                        onClick={()=>setSel(!sel)}>Show Rules</button>
+                        onClick={handleOnRules}>Show Rules</button>
                         ) : (
                         <button 
                         className={style.hideResult}
-                        onClick={()=>setSel(!sel)}>Hide Rules</button>
+                        onClick={handleOnRules}>Hide Rules</button>
                         )}
                     </div>
                 </div>

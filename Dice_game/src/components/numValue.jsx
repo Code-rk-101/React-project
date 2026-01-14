@@ -6,7 +6,6 @@ const NumVal = ({val})=>
 {
     
     const {handleOnButtonSelection,selectVal} = useContext(GameStore);
-    console.log(selectVal)
     const handleOnClick =()=>
     {
         handleOnButtonSelection(val);
