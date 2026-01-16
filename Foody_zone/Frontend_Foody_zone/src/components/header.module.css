@@ -1,0 +1,64 @@
+.header_main_div
+{
+    height: 241px;
+    width: 1440px;
+    background-color: #323334;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 54px;
+
+}
+
+.search_bar
+{
+    height: 40px;
+    width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* .logo
+{
+    height: 37px;
+    width: 184px;
+} */
+.inp
+{
+    height: 40px;
+    width: 285px;
+    border: 1px solid var(--orange2); 
+    border-radius: 5px;
+    background-color: transparent;
+    color: var(--white);
+    font-size: 16px;
+    padding-left: 15px;
+}
+.inp::placeholder
+{
+    color: var(--white);
+    font-size: 16px;
+}
+input:focus
+{
+    outline: none;
+}
+.btn
+{
+    padding: 6px 12px;
+    background-color: var(--orange1);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: var(--white);
+}
+.nav
+{
+    height: 31px;
+    width: 326px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
