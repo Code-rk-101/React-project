@@ -1,15 +1,25 @@
 import styles from "./card.module.css"
 
-const Card =()=>
+const Card =({food})=>
 {
     return (
         <>
             <div className={styles.card}>
                 <div className={styles.img}>
-                    <img src="/images/Ellipse 1.png" alt="" />
+                    <img 
+                    src={`http://localhost:9000${food.image}`} alt="food image" />
                 </div>
                 <div className={styles.content}>
-                    <h1>Boiled Eggs</h1>
+                    <div>
+                        <h3>{food.name}</h3>
+                        <p>
+                            {food.text}
+                        </p>
+                    </div>
+                    
+                    <button
+                    className={`btn ${styles.btn}`}>${food.price}</button>
+                    
                 </div>
             </div>
         </>

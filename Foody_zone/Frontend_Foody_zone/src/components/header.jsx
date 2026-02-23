@@ -1,7 +1,15 @@
+import { useContext } from "react";
 import styles from "./header.module.css"
+import FoodDataStore from "../store/food-store-context-store";
 
 const Header =()=>
 {
+    const type = ["All","Breakfast","Lunch","Dinner","Dessert"];
+    const {filterFood} = useContext(FoodDataStore);
+    const handleOnClick =(typ)=>
+    {
+        filterFood(typ.toLowerCase());
+    }
     return (
         <>
             <div className={styles.header_main_div}>
@@ -19,14 +27,13 @@ const Header =()=>
                     className={styles.inp} />
                 </div>
                 <div className={styles.nav}>
-                    <button 
-                    className={styles.btn}>All</button>
-                    <button
-                    className={styles.btn}>Breakfast</button>
-                    <button
-                    className={styles.btn}>Lunch</button>
-                    <button
-                    className={styles.btn}>Dinner</button>
+                    {type.map(
+                        (typ)=>(
+                        <button
+                        key={typ}
+                        className="btn"
+                        onClick={()=>handleOnClick(typ)}>{typ}</button>)
+                    )}
                 </div>
             </div>
         </>

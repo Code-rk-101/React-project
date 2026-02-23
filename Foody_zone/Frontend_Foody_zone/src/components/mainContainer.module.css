@@ -1,0 +1,26 @@
+.mainContainer
+{
+    max-width: 1440px;
+    height: fit-content;
+    min-height: calc(100vh - 241px);
+    background-image: url("../images/bg2.png");
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cardSection
+{
+    max-width: 1100px;
+    height: fit-content;
+    min-height: 398px;
+    margin-top: 32px;
+    margin-left: 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}

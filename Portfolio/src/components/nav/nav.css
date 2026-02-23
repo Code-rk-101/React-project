@@ -1,0 +1,138 @@
+nav
+{
+    width: 100%;
+    height: 80px;
+    padding: 20px ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0px;
+    z-index: 200;
+    background-color: rgb(0, 0, 0);
+}
+
+nav ul a
+{
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+}
+nav ul a:hover
+{
+    color: rgb(12, 191, 227);
+    border-bottom: 2px solid white;
+}
+.active
+{
+    color: rgb(12, 191, 227);
+    border-bottom: 2px solid white;
+    transition: none;
+}
+nav h1
+{
+    color: transparent;
+    font-size: 30px;
+    font-weight: 600;
+    cursor: pointer;
+
+    background: linear-gradient(to right,rgb(12, 191, 227),white);
+    background-clip: text;
+
+}
+nav ul{
+
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    font-size: 20px;
+}
+
+.hamburger
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    gap: 8px;
+
+    display: none;
+}
+.ham
+{
+    width: 40px;
+    height: 2px;
+    background-color: white;
+    transition: transform 0.5s ease-in-out;
+}
+.ham:nth-child(2)
+{
+    opacity: 100%;
+    transition: opacity 0.5s ease-in-out;
+}
+.activeham .ham:nth-child(1)
+{
+    transform: rotate(45deg) translate(7px,7px);
+    transition: transform 0.5s ease-in-out;
+}
+.activeham .ham:nth-child(2)
+{
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.activeham .ham:nth-child(3)
+{
+    transform: rotate(-45deg) translate(7px,-7px);
+    transition: transform 0.5s ease-in-out;
+}
+.mobileMenu
+{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 80px;
+    right: 0px;
+    background-color: rgba(0, 0, 0, 0.485);
+    backdrop-filter: blur(7px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+}
+.activeMobileMenu
+{
+    transform: translateX(0%);
+}
+@media (max-width: 750px) 
+{
+    .desktopMenu
+    {
+        display: none;
+    }
+    .hamburger
+    {
+        display: flex;
+    }
+    
+}
+@media (width > 750px) 
+{
+    .desktopMenu
+    {
+        display: flex;
+    }
+    .hamburger
+    {
+        display: none;
+    }
+        .mobileMenu
+    {
+        display: none;
+    }
+}

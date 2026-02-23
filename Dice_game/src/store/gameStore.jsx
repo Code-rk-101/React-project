@@ -1,10 +1,11 @@
 import { createContext, useReducer, useState ,} from "react";
 
 const GameStore = createContext(
-    {
-        handleOnButtonSelection:()=>{},
-    }
-);
+{
+    handleOnButtonSelection:()=>{},
+    handleOnDiceClick:()=>{},
+    resetScore:()=>{},
+});
 
 export  default GameStore;
 
@@ -132,7 +133,6 @@ export function GameStoreContext ({children})
                 errorMsgStatus
             }
         }>
-            
             {children}
         </GameStore.Provider>
 } ;

@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@layer utilities {
+	.no-scrollbar {
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
+	.no-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+.player-range::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 14px;
+	height: 14px;
+	border-radius: 9999px;
+	background: #fff;
+	border: none;
+	box-shadow: none;
+}
+
+.player-range::-moz-range-thumb {
+	width: 14px;
+	height: 14px;
+	border-radius: 9999px;
+	background: #fff;
+	border: none;
+	box-shadow: none;
+}
+
+/* Optional: remove Firefox focus outline/border artifacts */
+.player-range::-moz-focus-outer {
+	border: 0;
+}

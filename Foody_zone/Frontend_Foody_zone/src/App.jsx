@@ -1,14 +1,17 @@
 import './App.css'
 import Header from './components/header'
-import Main from './components/main'
+import MainContainer from './components/mainContainer'
+import { FoodDataStoreContext } from './store/food-store-context-store'
 
 function App() {
 
   return (
     <>
       <center>
-        <Header/>
-        <Main/>
+        <FoodDataStoreContext>
+          <Header/>
+          <MainContainer/>
+        </FoodDataStoreContext>
       </center>
     </>
   )
