@@ -35,7 +35,7 @@ const ChatSection = ()=>
             <div className="upperSection">
                 {!showResult?
                 <div className="heading">
-                    <span>HELLO RITIK</span>
+                    <span>HELLO</span>
                     <span>I am Your Virtual Assistant</span>
                     <span>How Can I Help You</span>
                 </div>:
